@@ -7,28 +7,112 @@
 
 :root.theme-light {
   --background-color: #fff;
+  --like-text-color: #fff;
   --accent-text: #000;
   --titles-weight: 700;
   --text-weight: 400;
   --border: #000;
   --main-font: Inter-Variable;
   --accent-font: PressStart2P;
+  --button-hover: rgba(0, 0, 0, .6);
+  --contour-color: #000;
+  --heart-main-body-color: rgba(255, 0, 0, 1);
+  --first-gradient-color: #d3d3d3;
+  --second-gradient-color: transparent;
+  --third-gradient-color: #e7e7e7;
+  --fourth-gradient-color: #1a1a1a;
+  --background-image: 
+  repeating-linear-gradient(
+    to right,
+    var(--first-gradient-color),
+    var(--first-gradient-color) 2px,
+    var(--second-gradient-color) 2px,
+    var(--second-gradient-color) 4px
+  ),
+  repeating-linear-gradient(
+    to bottom,
+    var(--third-gradient-color),
+    var(--third-gradient-color) 2px,
+    var(--second-gradient-color) 2px,
+    var(--second-gradient-color) 4px
+  ),
+  repeating-linear-gradient(
+    to bottom,
+    var(--third-gradient-color) 0.01%,
+    var(--fourth-gradient-color)
+  );
 }
 
 :root.theme-dark {
   --background-color: #000;
   --accent-text: #00cc14;
+  --like-text-color: #00cc14;
   --titles-weight: 785;
   --text-weight: 465;
   --border: #00cc14;
+  --button-hover: rgba(0, 204, 20, .6);
+  --contour-color: #00cc14;
+  --heart-main-body-color: rgba(255, 0, 0, 1);
+  --first-gradient-color: #000;
+  --second-gradient-color: transparent;
+  --third-gradient-color: #007f0c;
+  --fourth-gradient-color: #004306;
+  --background-image: 
+  repeating-linear-gradient(
+    to right,
+    var(--first-gradient-color),
+    var(--first-gradient-color) 2px,
+    var(--second-gradient-color) 2px,
+    var(--second-gradient-color) 4px
+  ),
+  repeating-linear-gradient(
+    to bottom,
+    var(--third-gradient-color),
+    var(--third-gradient-color) 2px,
+    var(--second-gradient-color) 2px,
+    var(--second-gradient-color) 4px
+  ),
+  repeating-linear-gradient(
+    to bottom,
+    var(--third-gradient-color) 0.01%,
+    var(--fourth-gradient-color)
+  );
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background-color: #000;
     --accent-text: #00cc14;
+    --like-text-color: #00cc14;
     --titles-weight: 785;
     --text-weight: 465;
     --border: #00cc14;
+    --button-hover: rgba(0, 204, 20, .6);
+    --contour-color: #00cc14;
+    --heart-sparks-color: rgba(255, 0, 0, 1);
+    --first-gradient-color: #000;
+    --second-gradient-color: transparent;
+    --third-gradient-color: #007f0c;
+    --fourth-gradient-color: #004306;
+    --background-image: 
+    repeating-linear-gradient(
+      to right,
+      var(--first-gradient-color),
+      var(--first-gradient-color) 2px,
+      var(--second-gradient-color) 2px,
+      var(--second-gradient-color) 4px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      var(--third-gradient-color),
+      var(--third-gradient-color) 2px,
+      var(--second-gradient-color) 2px,
+      var(--second-gradient-color) 4px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      var(--third-gradient-color) 0.01%,
+      var(--fourth-gradient-color)
+    );
   }
 }
