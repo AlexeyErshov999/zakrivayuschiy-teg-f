@@ -23,23 +23,23 @@
   --fourth-gradient-color: #1a1a1a;
   --background-image: 
   repeating-linear-gradient(
-    to right,
-    var(--first-gradient-color),
-    var(--first-gradient-color) 2px,
-    var(--second-gradient-color) 2px,
-    var(--second-gradient-color) 4px
+    to left,
+    var(--first-gradient-color, #d3d3d3),
+    var(--first-gradient-color, #d3d3d3) 2px,
+    var(--second-gradient-color, transparent) 2px,
+    var(--second-gradient-color, transparent) 4px
   ),
   repeating-linear-gradient(
     to bottom,
-    var(--third-gradient-color),
-    var(--third-gradient-color) 2px,
-    var(--second-gradient-color) 2px,
-    var(--second-gradient-color) 4px
-  ),
+    var(--third-gradient-color, #e7e7e7),
+    var(--third-gradient-color, #e7e7e7) 2px,
+    var(--second-gradient-color, transparent) 2px,
+    var(--second-gradient-color, transparent) 4px
+  )
   repeating-linear-gradient(
     to bottom,
-    var(--third-gradient-color) 0.01%,
-    var(--fourth-gradient-color)
+    var(--third-gradient-color,#e7e7e7) 0.01%,
+    var(--fourth-gradient-color, #1a1a1a)
   );
 }
 
@@ -60,22 +60,22 @@
   --background-image: 
   repeating-linear-gradient(
     to right,
-    var(--first-gradient-color),
-    var(--first-gradient-color) 2px,
-    var(--second-gradient-color) 2px,
-    var(--second-gradient-color) 4px
+    var(--first-gradient-color,#000),
+    var(--first-gradient-color, #000) 2px,
+    var(--second-gradient-color, transparent) 2px,
+    var(--second-gradient-color, transparent) 4px
   ),
   repeating-linear-gradient(
     to bottom,
-    var(--third-gradient-color),
-    var(--third-gradient-color) 2px,
-    var(--second-gradient-color) 2px,
-    var(--second-gradient-color) 4px
+    var(--third-gradient-color, #007f0c),
+    var(--third-gradient-color, #007f0c) 2px,
+    var(--second-gradient-color, transparent) 2px,
+    var(--second-gradient-color, transparent) 4px
   ),
   repeating-linear-gradient(
     to bottom,
-    var(--third-gradient-color) 0.01%,
-    var(--fourth-gradient-color)
+    var(--third-gradient-color, #007f0c) 0.01%,
+    var(--fourth-gradient-color, #004306)
   );
 }
 
@@ -95,24 +95,24 @@
     --third-gradient-color: #007f0c;
     --fourth-gradient-color: #004306;
     --background-image: 
-    repeating-linear-gradient(
-      to right,
-      var(--first-gradient-color),
-      var(--first-gradient-color) 2px,
-      var(--second-gradient-color) 2px,
-      var(--second-gradient-color) 4px
-    ),
-    repeating-linear-gradient(
-      to bottom,
-      var(--third-gradient-color),
-      var(--third-gradient-color) 2px,
-      var(--second-gradient-color) 2px,
-      var(--second-gradient-color) 4px
-    ),
-    repeating-linear-gradient(
-      to bottom,
-      var(--third-gradient-color) 0.01%,
-      var(--fourth-gradient-color)
-    );
+      repeating-linear-gradient(
+        to right,
+        var(--first-gradient-color,#000),
+        var(--first-gradient-color, #000) 2px,
+        var(--second-gradient-color, transparent) 2px,
+        var(--second-gradient-color, transparent) 4px
+      ),
+      repeating-linear-gradient(
+        to bottom,
+        var(--third-gradient-color, #007f0c),
+        var(--third-gradient-color, #007f0c) 2px,
+        var(--second-gradient-color, transparent) 2px,
+        var(--second-gradient-color, transparent) 4px
+      ),
+      repeating-linear-gradient(
+        to bottom,
+        var(--third-gradient-color, #007f0c) 0.01%,
+        var(--fourth-gradient-color, #004306)
+      );
   }
 }

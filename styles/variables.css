@@ -18,7 +18,7 @@
   --fourth-gradient-color: #1a1a1a;
   --background-image: 
   repeating-linear-gradient(
-    to right,
+    to left,
     var(--first-gradient-color),
     var(--first-gradient-color) 2px,
     var(--second-gradient-color) 2px,

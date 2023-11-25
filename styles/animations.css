@@ -25,11 +25,11 @@
 
 @keyframes button-animation {
   from {
-    color: var(--accent-text);
+    color: var(--accent-text, #000);
   }
 
   to {
-    color: var(--button-hover);
+    color: var(--button-hover,rgba(0, 0, 0, .6));
   }
 }
 
