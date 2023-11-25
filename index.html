@@ -555,13 +555,13 @@
     </main>
     <footer class="footer">
       <button
-        class="button footer__button card__like-button"
-        type="button"
-        onclick="window['dialog-id'].showModal()"
+        class="button footer__button"
+        type="button" 
+        onclick="window['dialog-id'].showModal()" 
         aria-controls="dialog-id"
       >
-        <svg width="28" height="28" viewBox="0 0 39 39">
-          <use href="./svg/floppy.svg#floppy" class="floppy"></use>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 39" class="floppy">
+          <use href="./svg/floppy.svg#floppy" class="button__text footer-button__floppy"></use>
         </svg>
         <span class="footer__button-text button__text"
           >Сохранить на память</span
@@ -570,8 +570,8 @@
     </footer>
     <dialog id="dialog-id">
       <div class="dialog-id__text-container">
-        <svg viewBox="0 0 39 39" class="text-container__svg">
-          <use href="./svg/floppy.svg#floppy"></use>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 39" class="text-container__svg">
+          <use href="./svg/floppy.svg#floppy" class="dialog-floppy"></use>
         </svg>
         <p class="dialog-id__text">Вставьте дискету, чтобы продолжить</p>
       </div>
