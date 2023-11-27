@@ -18,9 +18,7 @@
   </head>
   <body class="page">
     <header class="header">
-      <a class="header__logo-link">
-        <h1 class="header__title">&lt;/html&gt;</h1>
-      </a>
+      <a class="header__logo-link header__title"> &lt;/html&gt;</a>
       <h1 class="header__work-title">закрывающий тег</h1>
       <nav class="theme-menu header__theme-menu">
         <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
@@ -556,27 +554,41 @@
     <footer class="footer">
       <button
         class="button footer__button"
-        type="button" 
-        onclick="window['dialog-id'].showModal()" 
+        type="button"
+        onclick="window['dialog-id'].showModal()"
         aria-controls="dialog-id"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 39" class="floppy">
-          <use href="./svg/floppy.svg#floppy" class="button__text footer-button__floppy"></use>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 39 39"
+          class="floppy"
+        >
+          <use
+            href="./svg/floppy.svg#floppy"
+            class="button__text footer-button__floppy"
+          ></use>
         </svg>
         <span class="footer__button-text button__text"
-          >Сохранить на память</span
-        >
+          >Сохранить на память</span>
       </button>
     </footer>
     <dialog id="dialog-id">
       <div class="dialog-id__text-container">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 39" class="text-container__svg">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 39 39"
+          class="text-container__svg"
+        >
           <use href="./svg/floppy.svg#floppy" class="dialog-floppy"></use>
         </svg>
-        <p class="dialog-id__text">Вставьте дискету, чтобы продолжить</p>
+        <p class="dialog-id__text">
+          Вставьте <span class="nowrap">дискету, чтобы</span> продолжить
+        </p>
       </div>
       <form method="dialog">
-        <button class="dialog-id__button" type="submit">ok</button>
+        <button class="dialog-id__button" type="submit">
+          <span class="dialog-id__button-text button__text">ok</span>
+        </button>
       </form>
     </dialog>
     <script src="./scripts/like.js"></script>

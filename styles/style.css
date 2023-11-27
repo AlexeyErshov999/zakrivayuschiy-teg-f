@@ -15,21 +15,21 @@
 */
 
 .page {
-  background-color: var(--background-color);
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  object-fit: cover;
   color: var(--accent-text, #000);
   font-family: var(--main-font, sans-serif);
   font-style: normal;
+  background-color: var(--background-color);
+  background-image: var(--background-image);
+  background-position: center;
+  background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-variation-settings: 'wght' 400;
-  background-image: var(--background-image);
-  object-fit: cover;
-  background-attachment: fixed;
-  background-position: center;
 }
 
 .header {
@@ -186,18 +186,18 @@
   font-weight: var(--text-weight);
   font-size: 14px;
   line-height: normal;
-  mix-blend-mode: hard-light;
   text-shadow: 2px 0 2px var(--background-color), 
               0 2px 2px var(--background-color), 
               -2px 0 2px var(--background-color), 
               0 -2px 2px var(--background-color);
+  mix-blend-mode: hard-light;
 }
 
 @supports((text-stroke: 1px var(--background-color)) or (-webkit-text-stroke: 1px var(--background-color))) {
   .card__watermark {
+      text-shadow: none;
       -webkit-text-stroke: 1px var(--background-color);
       text-stroke: 1px var(--background-color);
-      text-shadow: none;
   }
 }
 
@@ -260,8 +260,8 @@
 }
 
 .sparks {
-  fill: var(--heart-main-body-color);
   opacity: 0;
+  fill: var(--heart-main-body-color);
 }
 
 .like-icon .core {
@@ -345,11 +345,11 @@
 }
 
 .footer__button {
-  padding: 15px;
-  border: 2px solid var(--accent-text);
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: 2px solid var(--accent-text);
+  padding: 15px;
   inline-size: clamp(19.125rem, 18.487rem + 2.723vw, 20.938rem);
   block-size: 80px;
 }
@@ -362,17 +362,20 @@
   block-size: 80px;
 }
 
-.footer__button:focus {
+.footer__button:focus,
+.dialog-id__button:focus {
   outline: none;
 }
 
-.footer__button:focus-visible {
+.footer__button:focus-visible,
+.dialog-id__button:focus-visible {
   box-shadow: 2px 2px 0px 0px var(--accent-text);
   outline: none;
   transition: 0.3s;
 }
 
-.footer__button::before {
+.footer__button::before,
+.dialog-id__button::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -380,16 +383,17 @@
   inline-size: 0;
 }
 
-.footer__button:hover::before {
+.footer__button:hover::before,
+.dialog-id__button:hover::before {
   animation: move 0.5s ease-in-out forwards;
 }
 
 .floppy {
-  fill: var(--accent-text, #000);
   flex-shrink: 0;
+  margin-block-end: -5px;
+  fill: var(--accent-text, #000);
   inline-size: 28px;
   block-size: 28px;
-  margin-block-end: -5px;
   mix-blend-mode: difference;
 }
 
@@ -402,7 +406,6 @@
 }
 
 #dialog-id[open] {
-  margin-block-end: 232px;
   border: 2px solid var(--border);
   padding: 32px 42px;
   color: var(--accent-text);
@@ -418,27 +421,42 @@
 
 .text-container__svg {
   flex-shrink: 0;
-  inline-size: 39px;
-  block-size: 39px;
   margin-inline-start: auto;
   margin-block-start: auto;
   margin-block-end: auto;
+  inline-size: 39px;
+  block-size: 39px;
 }
 
 .dialog-id__text {
   font-family: var(--accent-font, PressStart2P, fantasy);
-  font-size: 14px;
   font-weight: 400;
+  font-size: 14px;
   line-height: 150%;
   text-transform: uppercase;
 }
 
+.nowrap {
+  white-space: nowrap;
+}
+
 .dialog-id__button {
-  width: 257px;
+  position: relative;
+  z-index: 1;
+  width: 100%;
   height: 38px;
-  flex-shrink: 0;
   border: 2px solid var(--accent-text);
+}
+
+.dialog-id__button-text {
+  position: relative;
+  z-index: 2;
+  color: var(--accent-text);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 90%;
   text-transform: uppercase;
+  mix-blend-mode: difference;
 }
 
 #dialog-id::backdrop {
@@ -463,7 +481,6 @@
     flex-direction: row;
     gap: 8px;
     block-size: 51px;
-    align-items: center;
   }
 
   .floppy {
@@ -473,6 +490,10 @@
   }
 
   #dialog-id[open] {
-    margin-block-end: 384px;
+    padding: 32px;
+  }
+
+  .footer__button-text {
+    margin-block-end: 5px;
   }
 }
