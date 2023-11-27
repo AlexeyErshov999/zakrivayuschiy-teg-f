@@ -442,7 +442,6 @@
 
 .dialog-id__button {
   position: relative;
-  z-index: 1;
   width: 100%;
   height: 38px;
   border: 2px solid var(--accent-text);
@@ -451,7 +450,7 @@
 .dialog-id__button-text {
   position: relative;
   z-index: 2;
-  color: var(--accent-text);
+  color: var(--like-text-color);
   font-weight: 400;
   font-size: 14px;
   line-height: 90%;
